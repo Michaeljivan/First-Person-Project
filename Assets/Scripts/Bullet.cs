@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,8 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.tag == "enemy")
         {
             Destroy(collision.gameObject);
+            // Add score here
+            ScoreManager.instance.AddPoints();
         }
     }
 }
